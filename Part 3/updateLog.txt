@@ -1,0 +1,58 @@
+mysql> source D:/Sem-2/databases/project/Project_Part3/update.sql
+Database changed
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
++-----------------------+
+| concat('BO',@borr_id) |
++-----------------------+
+| BO00000565            |
++-----------------------+
+1 row in set (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 1 row affected (0.10 sec)
+
++--------------+------------+--------+---------------------+------------+-------------+------+
+| borrowing_id | offered_id | custid | start_date          | end_date   | total_price | VAT  |
++--------------+------------+--------+---------------------+------------+-------------+------+
+| BO00000014   | O00000024  | C10014 | 2014-07-24 00:00:00 | 2014-07-25 |        4.00 | 0.40 |
+| BO00000565   | O00000025  | c10014 | 2015-03-31 21:03:57 | 2015-04-02 |        4.20 | 0.29 |
++--------------+------------+--------+---------------------+------------+-------------+------+
+2 rows in set (0.00 sec)
+
+Query OK, 1 row affected (0.04 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
++--------+-----------+--------+
+| custid | movie_id  | rating |
++--------+-----------+--------+
+| C10012 | M00000012 |      5 |
+| C10012 | M00000224 |      4 |
+| C10012 | M00000862 |      3 |
++--------+-----------+--------+
+3 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 167 rows affected (0.16 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 108 rows affected (0.12 sec)
+Rows matched: 166  Changed: 108  Warnings: 0
+
+Query OK, 1 row affected (0.05 sec)
+
+Query OK, 3 rows affected (0.03 sec)
+Rows matched: 4  Changed: 3  Warnings: 0
+
+mysql> exit;

@@ -1,0 +1,38 @@
+mysql> use vamshins
+Database changed
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> source createTable.sql
+Database changed
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> show tables
+    -> ;
++--------------------+
+| Tables_in_vamshins |
++--------------------+
+| BORROWING          |
+| CUSTOMER_RATING    |
+| EXEMPLAR           |
+| Genre              |
+| MEDIUM             |
+| MOVIESOFFERED      |
+| customer           |
+| movie              |
++--------------------+
+8 rows in set (0.00 sec)

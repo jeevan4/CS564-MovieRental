@@ -1,0 +1,88 @@
+.mynavigation
+        {
+    position:absolute;
+    margin-left:-300px; /* half of width */
+    margin-top:-250px;  /* half of height */
+    top:50%;
+    left:50%;
+        }
+.mytable
+        {
+    position: absolute;
+    margin-left:-170px; /* half of width */
+    margin-top:-170px;  /* half of height */
+    top:50%;
+    left:50%;
+        }
+
+.myresult
+		{
+  width:500px;
+  margin: 200px auto;
+  alignment-adjust: auto;
+        }
+
+.myorder
+		{
+  width:1000px;
+  margin:200px auto;
+  alignment-adjust: auto;
+        }
+		
+.myheading
+        {
+    position:absolute;
+    margin-left:-150px; /* half of width */
+    margin-top:-300px;  /* half of height */
+    top:50%;
+    left:50%;
+	text-align: center
+        } 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	alignment-adjust: central
+}
+
+li {
+    float: left;
+}
+
+ .mylink {
+  display: block;
+  font-weight: 200;
+  color: #FFFFFF;
+  background-color: darkgoldenrod;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #7A991A;
+}
+
+	.TFtable{
+		border-collapse:collapse;
+	}
+	.TFtable td{ 
+		padding:7px; border:black 1px solid;
+	}
+	.TFtable th{ 
+		padding:7px; border:black 1px solid;
+	}
+	/* provide some minimal visual accomodation for IE8 and below */
+	.TFtable tr{
+		background: grey;
+	}
+	/*  Define the background color for all the ODD background rows  */
+	.TFtable tr:nth-child(odd){ 
+		background: grey;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	.TFtable tr:nth-child(even){
+		background: white;
+	}

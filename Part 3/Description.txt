@@ -1,0 +1,61 @@
+Description for Queries Present in Queries.sql
+==============================================
+<query-01>To concatenate first and last name to display a welcome message in front end.
+
+<query-02> To get order details of a customer or for all customers.
+
+<query-03> To get order details for a particular customer or customers , ordered by Start date.
+
+<query-04> It displays output of all the films rated by a customer.If a customer rates 10 movies this displays Output of 'Customer_Name, FilmName , Rating'.
+
+<query-05> This query displays all the available films with particular exemplar. An exemplar may contain many movies , but all of them may not be avaialable currently. So this ouput shows only film names that are available with exemplar.
+
+<query-06> This query outputs average rating for an particular film. A film may be rated by many customers, so for a customer to buy/rent a film he needs to see average rating , this query gives us hat value.
+
+<query-07> This query outputs all the distinct customers and their ratings for a particular movie. If a persons want to see who are all th customers rated for this movie he can see this output.
+
+<query-08> Selecting top 10 rated movies with group by 
+
+<query-09> Selecting top 3 per genre (union query)
+
+<query-10> Selecting top rated movies that are offered only through ONLINE medium.
+
+Description for Queries present in update.sql
+==============================================
+
+<insert-01> To insert an new order into borrowing table when user selects a movie for rent.
+
+<insert-02> To insert customer rating if and only if the customer purchased that movie before.
+
+<delete-01> To remove movies offered in moviesoffered table if an exemplar is not offering movies anymore.
+
+<update-01> To update the availability status from 'Y' to 'N' in moviesoffered table if an exemplar is not offering movies anymore.
+
+<delete-02> This query deletes the rating given by a user for a particular film, if a user wants to delete his rating for a film, he can delete his rating by using this query.
+
+<update-02> This query updates already reviewed movie by a customer. If a person already rated a movie, if he wants to change it pther value, he can change it by this query.
+
+Description for Index present in index.sql
+==============================================
+Indexes are useful for columns which are often used in Joins. Therefore, we identified below 
+indexes are useful for 	our databse.
+
+Index1: We created an index for the column 'custid' in 'customer_rating' table.We felt this index is necessary because a customer may rate many movies so we always compare custid of 'customer_rating' to 'customer' in joins where join of same column is always costly, so we felt we create a index on 'custid' which could improve cost of query execution.
+
+Index2: We created an index for the column 'movie_id','exemplar_id' in 'moviesoffered' table.We felt this index is necessary because if customer wannts to see all the movies provided by exemplar,to check whether which movie is available for exemplar, which movies are brought by customer etc in such many cases we join those columns with other tables, where join of same column repeteadly for similar pi=urposes is always costly, so we felt we create a index on 'movie_id','exemplar_id' which could improve cost of query execution.
+
+<index-03> Colleting index on custid and offered_id from borrowing table will always be useful as we are using these columns to retrieve order details of a customer and also retrieving what movies a customer ordered before.
+
+Results:
+=======
+Time taken for <query-02> 
+before index:- (0.12 sec)
+after index :- (0.03 sec) -- We have seen improvement in performance.
+
+Time taken for <query-04> 
+before index:- (0.00 sec)
+after index :- (0.00 sec) -- The performance is negligible as the query is returning minimun number of rows.
+
+Time taken for <query-05> 
+before index:- (0.01 sec) 
+after index :- (0.00 sec)  -- Performance has been improved slightly.
